@@ -8,33 +8,33 @@ const colors = {
     900: "#333333",
   },
   primary: {
-    100: "#E8D6FC",
-    300: "#CDA9F7",
-    500: "#9826F5", // Cor principal
-    700: "#8143B7",
-    900: "#5B2E7D",
+    100: "#a1d0f7",
+    300: "#64B5F6",
+    500: "#2196F3", // Cor principal (Azul)
+    700: "#1976D2",
+    900: "#0D47A1",
   },
   secondary: {
-    100: "#C6F9D3",
+    100: "#f5fcf7",
     300: "#A3E4B0",
     500: "#69F59A", // Cor secundária vibrante
     700: "#3FC77B",
     900: "#268F55",
   },
   accent: {
-    100: "#CDEDE5",
+    100: "#e0ece9",
     300: "#A6D4C8",
     500: "#75C7B6", // Azul Esverdeado
     700: "#539F8D",
     900: "#357166",
   },
   text: {
-    primary: "#333333",
-    secondary: "#66756B",
+    primary: "#0D47A1",
+    secondary: "#a1d0f7",
     disabled: "#A3A3A3",
   },
   background: {
-    default: "#F5F5F5",
+    default: "#f5f6fa",
     paper: "#FFFFFF",
   },
 };

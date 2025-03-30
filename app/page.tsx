@@ -1,10 +1,17 @@
-import { Box } from "@mui/material";
+import MainBanner from "@/app_ui/MainBanner";
+import { Box, Stack } from "@mui/material";
 import React from "react";
 
-export default function Header() {
+export default function RootPage() {
   return (
-    <React.Fragment>
-      <Box>test</Box>
-    </React.Fragment>
+    <Stack>
+      <MainBanner
+        sx={{
+          backgroundColor: "background.primary",
+        }}
+      >
+        test
+      </MainBanner>
+    </Stack>
   );
 }

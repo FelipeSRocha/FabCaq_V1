@@ -24,8 +24,8 @@ export default function RootLayout({
               width: "100vw",
             }}
           >
-            <HeaderBar />
-            {children}
+            {/* <HeaderBar /> */}
+            <Box sx={{ flex: 1 }}>{children}</Box>
           </Box>
         </ThemeProvider>
       </body>
