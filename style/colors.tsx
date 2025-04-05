@@ -8,6 +8,8 @@ const colors = {
     900: "#333333",
   },
   primary: {
+    25: "#e9ecfa",
+    50: "#dee2f8",
     100: "#a1d0f7",
     300: "#64B5F6",
     500: "#2196F3", // Cor principal (Azul)

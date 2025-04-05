@@ -18,17 +18,19 @@ import {
   List,
   ListItem,
   ListItemButton,
+  Button,
 } from "@mui/material";
 import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
 import AnalyticsRoundedIcon from "@mui/icons-material/AnalyticsRounded";
 import PeopleRoundedIcon from "@mui/icons-material/PeopleRounded";
 import AssignmentRoundedIcon from "@mui/icons-material/AssignmentRounded";
+import SearchIcon from "@mui/icons-material/Search";
 
 const mainListItems = [
-  { text: "Home", icon: <HomeRoundedIcon /> },
-  { text: "Analytics", icon: <AnalyticsRoundedIcon /> },
-  { text: "Clients", icon: <PeopleRoundedIcon /> },
-  { text: "Tasks", icon: <AssignmentRoundedIcon /> },
+  { text: "Home", icon: <HomeRoundedIcon fontSize="small" /> },
+  { text: "Search", icon: <SearchIcon fontSize="small" /> },
+  // { text: "Clients", icon: <PeopleRoundedIcon fontSize="small" /> },
+  // { text: "Tasks", icon: <AssignmentRoundedIcon fontSize="small" /> },
 ];
 
 export default function SideMenu() {
@@ -47,9 +49,10 @@ export default function SideMenu() {
         borderColor: "primary.light",
         borderTop: 0,
         width: "12%",
+        p: 1,
       }}
     >
-      <Box
+      {/* <Box
         sx={{
           display: "flex",
           p: 1.5,
@@ -64,19 +67,29 @@ export default function SideMenu() {
           Fabri Caqui
         </Typography>
       </Box>
-      <Divider sx={{ borderColor: "primary.light" }} />
+      <Divider sx={{ borderColor: "primary.light" }} /> */}
       <Stack sx={{ flexGrow: 1, p: 1, justifyContent: "space-between" }}>
-        <List dense sx={{ backgroundColor: "background.default" }}>
+        <List
+          dense
+          sx={{
+            backgroundColor: "background.default",
+          }}
+        >
           {mainListItems.map((item, index) => (
-            <ListItem key={index} disablePadding sx={{ display: "block" }}>
+            <ListItem
+              key={index}
+              disablePadding
+              sx={{ display: "block", mb: 1 }}
+            >
               <ListItemButton
                 selected={index === 0}
                 sx={(theme) => ({
+                  borderRadius: 2,
                   "&.Mui-selected": {
-                    backgroundColor: theme.palette.primary.light, // Cor quando selecionado
+                    backgroundColor: theme.palette.action.selected, // Cor quando selecionado
                     color: theme.palette.common.white, // Cor do texto quando selecionado
                     "&:hover": {
-                      backgroundColor: theme.palette.primary.main, // Cor ao passar o mouse no item selecionado
+                      backgroundColor: theme.palette.action.hover, // Cor ao passar o mouse no item selecionado
                     },
                   },
                   "&:hover": {
@@ -84,24 +97,24 @@ export default function SideMenu() {
                   },
                 })}
               >
-                <ListItemIcon sx={{ color: "primary.dark" }}>
+                <ListItemIcon sx={{ color: "primary.dark", minWidth: 36 }}>
                   {item.icon}
                 </ListItemIcon>
-                <ListItemText
+                <Typography
+                  variant="button"
                   sx={(theme) => ({
                     color: theme.palette.text.primary,
-                    // "&.Mui-selected": {
-                    //   color: theme.palette.text.secondary,
-                    //   "&:hover": {
-                    //     color: theme.palette.text.secondary,
-                    //   },
-                    // },
-                    // "&:hover": {
-                    //   color: theme.palette.text.secondary,
-                    // },
+                  })}
+                >
+                  {item.text}
+                </Typography>
+                {/* <ListItemText
+                  sx={(theme) => ({
+                    color: theme.palette.text.primary,
+                    fontWeight: 100,
                   })}
                   primary={item.text}
-                />
+                /> */}
               </ListItemButton>
             </ListItem>
           ))}
@@ -117,7 +130,10 @@ export default function SideMenu() {
           borderColor: "primary.light",
         }}
       >
-        <Avatar
+        <Button variant="outlined" size="large" sx={{ flexGrow: 1 }}>
+          Login
+        </Button>
+        {/* <Avatar
           sizes="small"
           alt="Riley Carter"
           src="/static/images/avatar/7.jpg"
@@ -133,7 +149,7 @@ export default function SideMenu() {
           <Typography variant="caption" sx={{ color: "text.secondary" }}>
             riley@email.com
           </Typography>
-        </Box>
+        </Box> */}
         {/* <OptionsMenu /> */}
       </Stack>
     </Stack>

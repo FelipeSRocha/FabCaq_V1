@@ -1,35 +1,34 @@
-// styles/theme.ts
 import { createTheme } from "@mui/material/styles";
-import colors from "./colors";
 
 const theme = createTheme({
   palette: {
+    mode: "light",
     primary: {
-      light: colors.primary[100],
-      main: colors.primary[500],
-      dark: colors.primary[900],
+      light: "#E1BAEA", // roxo claro
+      main: "#643175", // roxo base
+      dark: "#340643", // roxo escuro
     },
     secondary: {
-      light: colors.secondary[100],
-      main: colors.secondary[500],
-      dark: colors.secondary[700],
+      light: "#FFDDC2", // laranja claro
+      main: "#E8822F", // laranja base
+      dark: "#924f1a", // laranja escuro
     },
     success: {
-      light: colors.accent[100],
-      main: colors.accent[500],
-      dark: colors.accent[700],
+      light: "#C9F3E3", // verde claro
+      main: "#2EBD85", // verde base (success)
+      dark: "#19915F", // verde escuro
     },
     text: {
-      primary: colors.text.primary,
-      secondary: colors.text.secondary,
+      primary: "#1F1F1F", // texto principal
+      secondary: "#5A5A5A", // texto secundário
     },
     action: {
-      hover: colors.primary[100],
-      selected: colors.primary[300],
+      hover: "#E1BAEA", // hover roxo claro
+      selected: "#e0c8ee", // roxo médio (usado em itens selecionados)
     },
     background: {
-      default: colors.background.default,
-      paper: colors.background.paper,
+      default: "#fefbff", // fundo geral
+      paper: "#FFFFFF", // fundo de cards/modais
     },
   },
 });
